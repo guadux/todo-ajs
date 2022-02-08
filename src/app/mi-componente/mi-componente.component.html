@@ -16,8 +16,6 @@ Tu edad es: {{edad}}</h3>
 	<li *ngFor="let nombre of nombres; let indice = index;" >{{ (indice+1)+". "+nombre }}</li>
 </ul>
 
-<p>Table is just a mapping of objects to table rows with <code>ngFor</code></p>
-
 <div class="input-group mb-3">
 	<input type="text" class="form-control" placeholder="Nueva Tarea" aria-label="Nueva Tarea" aria-describedby="basic-addon2" [(ngModel)]="newTodo" >
 	<div class="input-group-append">
