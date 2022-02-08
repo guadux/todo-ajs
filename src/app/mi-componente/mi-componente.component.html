@@ -1,0 +1,45 @@
+<p>mi-componente works!</p>
+<h3 [style.background]="edad >=18 ? 'green' : 'red'"
+	[style.color]="edad >=18 ? 'white' : 'black'">
+Tu edad es: {{edad}}</h3>
+<div *ngIf="edad >= 18 ">
+	Sos mayor de edad
+</div>
+<div *ngIf="edad < 18 ">
+	Sos menor de edad
+</div>
+
+<button (click)="aumentarEdad()">+</button>
+<button (click)="disminuirEdad()">-</button>
+
+<ul>
+	<li *ngFor="let nombre of nombres; let indice = index;" >{{ (indice+1)+". "+nombre }}</li>
+</ul>
+
+<p>Table is just a mapping of objects to table rows with <code>ngFor</code></p>
+
+<div class="input-group mb-3">
+	<input type="text" class="form-control" placeholder="Nueva Tarea" aria-label="Nueva Tarea" aria-describedby="basic-addon2" [(ngModel)]="newTodo" >
+	<div class="input-group-append">
+	  <button class="btn btn-outline-secondary" type="button" (click)="agregar()">Agregar</button>
+	</div>
+  </div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+		  <th scope="col">#</th>
+		  <th scope="col">Tarea</th>
+		  <th scope="col">Acción</th>
+		</tr>
+		</thead>
+  <tbody>
+  <tr *ngFor="let tarea of tareas; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    
+    <td class="{{ (tarea.isCompleted)? 'done': ''}}" (click)="eliminar(i)">
+      {{tarea.name}}
+    </td>
+    <td (click)="delete(i)">x</td>
+  </tr>
+  </tbody>
+</table>

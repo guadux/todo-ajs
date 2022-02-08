@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Tarea XXY",
+        "isCompleted" : true
+    },
+    {
+        "name": "Otra tarea",
+        "isCompleted" : false
+    },
+    {
+        "name": "Task",
+        "isCompleted" : true
+    }
+]
