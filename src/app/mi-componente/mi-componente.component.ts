@@ -15,7 +15,7 @@ export class MiComponenteComponent implements OnInit {
 
   constructor() {
 	this.edad=18;
-	this.nombres = ["Guada", "Juan"];
+	this.nombres = ["Guada", "Juani"];
 	}
 
   ngOnInit(): void {
