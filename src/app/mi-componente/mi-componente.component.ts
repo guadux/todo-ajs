@@ -1,6 +1,5 @@
 import { ToDo } from './ToDo';
 import { Component, OnInit } from '@angular/core';
-import * as data from '../../../src/tareas.json';
 
 @Component({
   selector: 'mi-componente',
@@ -17,13 +16,7 @@ export class MiComponenteComponent implements OnInit {
   constructor() {
 	this.edad=18;
 	this.nombres = ["Guada", "Juan"];
-  // this.tareas = (data as any);
-  // console.log(this.tareas);
-  // this.tareas = new ToDo(this.http.get('tareas.json'));
-  
 	}
-
-
 
   ngOnInit(): void {
 	  console.log("compoente cargado");
